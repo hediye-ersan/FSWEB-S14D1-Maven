@@ -7,7 +7,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-
+import static org.junit.jupiter.api.Assertions.assertTrue;
 import java.lang.reflect.Field;
 
 import static org.hamcrest.MatcherAssert.assertThat;
@@ -58,7 +58,7 @@ public class MainTest {
     @DisplayName("getArea methodu Circle sınıfında doğru çalışıyor mu?")
     @Test
     public void testGetArea() throws NoSuchFieldException {
-        assertTrue(String.format("%.2f", circle.getArea()).contains("12"));
+        assertTrue(String.format("%,2f", circle.getArea()).contains("12"));
     }
 
     @DisplayName("Circle sınıf değişkenleri doğru access modifier a sahip mi ?")
